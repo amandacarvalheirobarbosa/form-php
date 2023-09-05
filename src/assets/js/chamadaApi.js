@@ -17,34 +17,56 @@ document
     const cidade = document.getElementById("cidade").value;
     const uf = document.getElementById("uf").value;
     const tipoServico = document.getElementById("tipoServico").value;
+    const termos = document.getElementById("termos");
 
-    if (tipoServico === "") {
-      alert("Por favor, selecione um serviço antes de confirmar.");
+    if (tipoServico === "" && !termos.checked) {
+      alert(
+        "Por favor, selecione um serviço e aceite os termos para continuar."
+      );
+    } else if (tipoServico === "") {
+      alert("Por favor, selecione um serviço para continuar.");
+    } else if (!termos.checked) {
+      alert("Por favor, aceite os termos para continuar.");
     } else {
-      const data = {
-        Nome: nome,
-        Email: email,
-        CNPJ: cnpj,
-        Celular: celular,
-        Agencia: agencia,
-        Conta: conta,
-        CEP: cep,
-        Endereco: endereco,
-        Numero: numero,
-        Complemento: complemento,
-        Bairro: bairro,
-        Cidade: cidade,
-        UF: uf,
-        TipoServico: tipoServico,
-        arquivos: [],
-      };
+      const formData = new FormData();
+      formData.append("Nome", nome);
+      formData.append("Email", email);
+      formData.append("CNPJ", cnpj);
+      formData.append("Celular", celular);
+      formData.append("Agencia", agencia);
+      formData.append("Conta", conta);
+      formData.append("CEP", cep);
+      formData.append("Endereco", endereco);
+      formData.append("Numero", numero);
+      formData.append("Complemento", complemento);
+      formData.append("Bairro", bairro);
+      formData.append("Cidade", cidade);
+      formData.append("UF", uf);
+      formData.append("TipoServico", tipoServico);
+
+      const fileInputs = document.querySelectorAll(".file-input");
+      const files = [];
+
+      fileInputs.forEach(function (fileInput) {
+        const inputFiles = fileInput.files;
+        if (inputFiles.length > 0) {
+          for (let i = 0; i < inputFiles.length; i++) {
+            files.push(inputFiles[i]);
+          }
+        }
+      });
+
+      if (files.length === 0) {
+        alert("Selecione os arquivos necessários.");
+      } else {
+        for (let i = 0; i < files.length; i++) {
+          formData.append("arquivos[]", files[i]);
+        }
+      }
 
       fetch("./api/api.php", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+        body: formData,
       })
         .then((response) => {
           if (!response.ok) {

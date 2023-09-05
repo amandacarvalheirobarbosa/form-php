@@ -190,7 +190,7 @@
 
         <div class="form-control pt-4">
           <label class="label cursor-pointer justify-start">
-            <input type="checkbox" class="checkbox checkbox-primary" />
+            <input id="termos" name="termos" type="checkbox" class="checkbox checkbox-primary" />
             <span class="label-text pl-2">Concordo com os a <a href="" class='link link-primary'>Política de
                 Privacidade</a></span>
           </label>
