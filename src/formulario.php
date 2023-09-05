@@ -16,7 +16,7 @@
 
         <div class="flex flex-row justify-center">
           <a href='https://apoio.gvdsolucoes.com.br/'>
-            <Image src="/assets/images/logo.png" alt="logo" width="200" height="150" />
+            <Image src="./assets/images/logo.png" alt="logo" width="200" height="150" />
           </a>
         </div>
 
@@ -164,7 +164,7 @@
           </label>
           <select id="tipoServico" name="tipoServico" class="select select-primary w-full max-w-md"
             onchange="createFileInputs(this.value);">
-            <option disabled>Selecione</option>
+            <option value="">Selecione</option>
             <option value="1">Antecipação de recebíveis</option>
             <option value="2">Home Equity</option>
             <option value="3">Crédito Tributário</option>
@@ -211,12 +211,12 @@
     <div class="flex flex-row justify-between">
       <div class="flex flex-row justify-start">
         <a href="https://apoio.gvdsolucoes.com.br/">
-          <images src="./assets/images/logo.png" style="height: 3vh; margin: 10px" />
+          <img src="./assets/images/logo.png" style="height: 3vh; margin: 10px" />
         </a>
       </div>
       <div class="flex flex-row justify-end">
         <a href="https://www.gvdsolucoes.com.br">
-          <images src="./assets/images/logo-gvd.png" style="height: 3vh; margin: 10px" />
+          <img src="./assets/images/logo-gvd.png" style="height: 3vh; margin: 10px" />
         </a>
       </div>
     </div>
