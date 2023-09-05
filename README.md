@@ -1,7 +1,7 @@
 ## Formulário
 
-### Front-end
+#### Front-end
 Desenvolvido em: HTML, CSS e JavaScript.
 
-### Back-end
+#### Back-end
 Desenvolvido em: PHP.
