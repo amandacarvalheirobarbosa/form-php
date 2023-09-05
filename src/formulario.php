@@ -209,14 +209,14 @@
   <!-- Footer -->
   <footer class="footer text-base-content">
     <div class="flex flex-row justify-between">
-      <div class="flex flex-row justify-start">
+      <div class="justify-start">
         <a href="https://apoio.gvdsolucoes.com.br/">
-          <img src="./assets/images/logo.png" style="height: 3vh; margin: 10px" />
+          <img src="./assets/images/logo.png" style="height: 3vh; margin: 10px;" />
         </a>
       </div>
-      <div class="flex flex-row justify-end">
+      <div class="justify-end">
         <a href="https://www.gvdsolucoes.com.br">
-          <img src="./assets/images/logo-gvd.png" style="height: 3vh; margin: 10px" />
+          <img src="./assets/images/logo-gvd.png" style="height: 3vh; margin: 10px;" />
         </a>
       </div>
     </div>
