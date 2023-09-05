@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <form id="formulario" method="POST">
+    <form id="formulario" method="POST" enctype="multipart/form-data">
       <div class="flex flex-col form-control max-w-screen-md p-4">
 
         <div class="flex flex-row justify-center">
@@ -188,12 +188,10 @@
           </div>
         </div> -->
 
-        <div class="form-control pt-4">
-          <label class="label cursor-pointer justify-start">
-            <input id="termos" name="termos" type="checkbox" class="checkbox checkbox-primary" />
-            <span class="label-text pl-2">Concordo com os a <a href="" class='link link-primary'>Política de
-                Privacidade</a></span>
-          </label>
+        <div class="flex flex-row form-control pt-4 cursor-pointer justify-start">
+          <input id="termos" name="termos" type="checkbox" class="checkbox checkbox-primary" />
+          <span class="label-text pl-2">Concordo com os a <a href="" class='link link-primary'>Política de
+              Privacidade</a></span>
         </div>
 
         <div class="flex flex-row justify-evenly pt-4">
