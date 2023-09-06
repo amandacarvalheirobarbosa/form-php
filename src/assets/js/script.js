@@ -21,3 +21,15 @@ function maskInput(input, pattern) {
 
   input.value = formattedValue;
 }
+
+/* Valida CPF e CNPJ */
+/* function validaCPFCNPJ(cpfcnpj) {
+  const regexCPFCNPJ =
+    /^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})$/;
+
+  if (regexCPFCNPJ.test(cpfcnpj)) {
+    return true;
+  } else {
+    return false;
+  }
+} */

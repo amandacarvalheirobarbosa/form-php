@@ -28,20 +28,20 @@ document
       alert("Por favor, aceite os termos para continuar.");
     } else {
       const formData = new FormData();
-      formData.append("Nome", nome);
-      formData.append("Email", email);
-      formData.append("CNPJ", cnpj);
-      formData.append("Celular", celular);
-      formData.append("Agencia", agencia);
-      formData.append("Conta", conta);
-      formData.append("CEP", cep);
-      formData.append("Endereco", endereco);
-      formData.append("Numero", numero);
-      formData.append("Complemento", complemento);
-      formData.append("Bairro", bairro);
-      formData.append("Cidade", cidade);
-      formData.append("UF", uf);
-      formData.append("TipoServico", tipoServico);
+      formData.append("nome", nome);
+      formData.append("email", email);
+      formData.append("cnpj", cnpj);
+      formData.append("celular", celular);
+      formData.append("agencia", agencia);
+      formData.append("conta", conta);
+      formData.append("cep", cep);
+      formData.append("endereco", endereco);
+      formData.append("numero", numero);
+      formData.append("complemento", complemento);
+      formData.append("bairro", bairro);
+      formData.append("cidade", cidade);
+      formData.append("uf", uf);
+      formData.append("tipoServico", tipoServico);
 
       const fileInputs = document.querySelectorAll(".file-input");
       const files = [];
