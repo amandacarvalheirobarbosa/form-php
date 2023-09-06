@@ -63,10 +63,10 @@ document
         }
       }
 
-      /* console.log("Tamanho do FormData:", formData.getAll("arquivos[]").length);
+      console.log("Tamanho do FormData:", formData.getAll("arquivos[]").length);
       formData.getAll("arquivos[]").forEach(function (file, index) {
         console.log(`Arquivo ${index + 1}: ${file.name}`);
-      }); */
+      });
 
       /* Fetch - chamada API */
       fetch("./api/api.php", {
@@ -81,6 +81,7 @@ document
         })
         .then((data) => {
           console.log("Resposta da API:", data);
+          window.location.href = "https://apoio.gvdsolucoes.com.br/";
         })
         .catch((error) => {
           console.error("Erro:", error.message);
