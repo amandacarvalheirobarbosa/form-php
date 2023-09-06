@@ -23,14 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   foreach ($_FILES["anexos"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
-      $fp = fopen($arquivo["tmp_name"], "rb");
-      $anexos[] = fread($fp, filesize($arquivo["tmp_name"]));
-      $anexos[] = base64_encode($anexos);
-      fclose($fp);
-
       $tmp_name = $_FILES["anexos"]["tmp_name"][$key];
       $name = basename($_FILES["anexos"]["name"][$key]);
       $anexos[] = array("name" => $name, "tmp_name" => $tmp_name);
+      move_uploaded_file($tmp_name, "data/$name");
     } else {
       echo "Erro no upload dos arquivos: " . $error;
     }
