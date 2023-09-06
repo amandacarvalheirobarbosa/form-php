@@ -41,20 +41,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $assunto = "Mensagem do formulário de contato";
 
   // Monta a mensagem
-  $corpo_mensagem = "Nome: " . $Nome . "\n";
-  $corpo_mensagem .= "E-mail: " . $Email . "\n";
-  $corpo_mensagem .= "CNPJ: " . $CNPJ . "\n";
-  $corpo_mensagem .= "Celular: " . $Celular . "\n";
-  $corpo_mensagem .= "Agência: " . $Agencia . "\n";
-  $corpo_mensagem .= "Conta: " . $Conta . "\n";
-  $corpo_mensagem .= "CEP: " . $CEP . "\n";
-  $corpo_mensagem .= "Endereço: " . $Endereco . "\n";
-  $corpo_mensagem .= "Número: " . $Numero . "\n";
-  $corpo_mensagem .= "Complemento: " . $Complemento . "\n";
-  $corpo_mensagem .= "Bairro: " . $Bairro . "\n";
-  $corpo_mensagem .= "Cidade: " . $Cidade . "\n";
-  $corpo_mensagem .= "UF: " . $UF . "\n";
-  $corpo_mensagem .= "TipoServico: " . $TipoServico . "\n";
+  $corpo_mensagem = "<strong>Nome: </strong>" . $Nome . "\n";
+  $corpo_mensagem .= "<strong>E-mail: </strong>" . $Email . "\n";
+  $corpo_mensagem .= "<strong>CNPJ: </strong>" . $CNPJ . "\n";
+  $corpo_mensagem .= "<strong>Celular: </strong>" . $Celular . "\n";
+  $corpo_mensagem .= "<strong>Agência: </strong>" . $Agencia . "\n";
+  $corpo_mensagem .= "<strong>Conta: </strong>" . $Conta . "\n";
+  $corpo_mensagem .= "<strong>CEP: </strong>" . $CEP . "\n";
+  $corpo_mensagem .= "<strong>Endereço: </strong>" . $Endereco . "\n";
+  $corpo_mensagem .= "<strong>Número: </strong>" . $Numero . "\n";
+  $corpo_mensagem .= "<strong>Complemento: </strong>" . $Complemento . "\n";
+  $corpo_mensagem .= "<strong>Bairro: </strong>" . $Bairro . "\n";
+  $corpo_mensagem .= "<strong>Cidade: </strong>" . $Cidade . "\n";
+  $corpo_mensagem .= "<strong>UF: </strong>" . $UF . "\n";
+  $corpo_mensagem .= "<strong>Tipo Serviço: </strong>" . $TipoServico . "\n";
 
   // Enviar o e-mail com anexos
   $boundary = md5(time());
