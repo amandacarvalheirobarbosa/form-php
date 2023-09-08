@@ -1,34 +1,3 @@
-/* 
-$(document).ready(function () {
-  $("#eCEP").bind('blur', function (e) {
-    ConsultaCEP();
-  });
-});
-
-function ConsultaCEP() {
-  var CEP = $("#eCEP").val().replace("-", "");
-  if (CEP.length == 8) {
-    var url = 'https://viacep.com.br/ws/' + CEP + '/json/'
-    $.ajax({
-      url: url,
-      datatype: 'jsonp',
-      crossdomain: true,
-      contenType: "application/json",
-      success: function (json) {
-        $("#endereco").val(json.logradouro);
-        $("#bairro").val(json.bairro);
-        $("#cidade").val(json.localidade);
-        $("#uf").val(json.uf);
-      },
-      error: function (xhr, ajaxOptions, thrownError) {
-        alert(thrownError);
-      }
-
-    });
-  }
-} 
-*/
-
 // https://viacep.com.br/exemplo/javascript/
 function limpaCEP() {
   document.getElementById("endereco").value = "";
