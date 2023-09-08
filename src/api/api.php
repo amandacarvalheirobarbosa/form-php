@@ -35,15 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $corpo_mensagem .= "UF: " . $UF . "\n";
   $corpo_mensagem .= "Tipo Serviço: " . $TipoServico . "\n";
 
-  $boundary = md5(time());
-  $headers = "From: $Email\r\n";
-  $headers .= "MIME-Version: 1.0\r\n";
-  $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
-  $message = "--$boundary\r\n";
-  $message .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
-  $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-  $message .= $corpo_mensagem . "\r\n";
-
+  // Documentos em anexo via e-mail 
   foreach ($Arquivos["tmp_name"] as $key => $tmp_name) {
     $name = $Arquivos["name"][$key];
     $type = $Arquivos["type"][$key];
@@ -57,6 +49,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $message .= "\r\n" . $file_content . "\r\n";
     }
   }
+
+  // Documentos com acessos via link
+  /* 
+  $diretorio_destino = "./media/arquivos/$name";
+  $url = ""; // Colocar URL
+
+  if (!file_exists($diretorio_destino)) {
+    mkdir($diretorio_destino, 0755, true);
+  }
+
+  $links_arquivos = array();
+
+  foreach ($Arquivos["tmp_name"] as $key => $tmp_name) {
+    $name = $Arquivos["name"][$key];
+    $nome_sem_espacos = str_replace(' ', '_', $name);
+
+    if (is_uploaded_file($tmp_name)) {
+      $caminho_destino = $diretorio_destino . $novo_nome_arquivo;
+      move_uploaded_file($tmp_name, $caminho_destino);
+
+      $link_arquivo = "$url/api/media/arquivos/" . $novo_nome_arquivo;
+      $links_arquivos[] = $link_arquivo;
+    }
+  }
+
+  if (!empty($links_arquivos)) {
+    $corpo_mensagem .= "\nLinks dos arquivos:\n";
+    foreach ($links_arquivos as $link) {
+      $corpo_mensagem .= $link . "\n";
+    }
+  } 
+  */
+
+  $boundary = md5(time());
+  $headers = "From: $Email\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+  $message = "--$boundary\r\n";
+  $message .= "Content-Type: text/plain; charset=\"utf-8\"\r\n";
+  $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+  $message .= $corpo_mensagem . "\r\n";
 
   if (mail($destinatario, $assunto, $message, $headers)) {
     echo "Mensagem com anexos enviada com sucesso!";

@@ -1,10 +1,7 @@
 function createFileInputs(servico) {
   const documentos = {
     //Pode adicionar quantos serviços quiser (desde que altere no html)
-    1: [
-      "CNH + RG ou CPF",
-      "Comprovante de endereço",
-    ],
+    1: ["CNH + RG ou CPF", "Comprovante de endereço"],
   };
 
   const quantidadeDocumentos = servico ? documentos[servico].length : 0;
@@ -17,7 +14,7 @@ function createFileInputs(servico) {
     fileInput.id = "arquivos";
     fileInput.name = "arquivos";
     fileInput.className =
-      "file-input file-input-bordered file-input-primary file-input-sm w-full max-w-md";
+      "file-input file-input-bordered file-input-primary w-full max-w-md file-input-sm";
 
     const label = document.createElement("label");
     label.className = "label";

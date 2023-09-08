@@ -81,6 +81,9 @@ document
         })
         .then((data) => {
           console.log("Resposta da API:", data);
+          /* setTimeout(function () {
+            window.location.href = "";
+          }, 5000); */
         })
         .catch((error) => {
           console.error("Erro:", error.message);
