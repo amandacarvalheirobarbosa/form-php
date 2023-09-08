@@ -30,7 +30,7 @@ document
       const formData = new FormData();
       formData.append("nome", nome);
       formData.append("email", email);
-      formData.append("cnpj", cpf);
+      formData.append("cpf", cpf);
       formData.append("celular", celular);
       formData.append("agencia", agencia);
       formData.append("conta", conta);
