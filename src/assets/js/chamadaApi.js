@@ -4,7 +4,7 @@ document
     event.preventDefault();
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
-    const cnpj = document.getElementById("cnpj").value;
+    const cpf = document.getElementById("cpf").value;
     const celular = document.getElementById("celular").value;
     const agencia = document.getElementById("agencia").value;
     const conta = document.getElementById("conta").value;
@@ -30,7 +30,7 @@ document
       const formData = new FormData();
       formData.append("nome", nome);
       formData.append("email", email);
-      formData.append("cnpj", cnpj);
+      formData.append("cnpj", cpf);
       formData.append("celular", celular);
       formData.append("agencia", agencia);
       formData.append("conta", conta);
