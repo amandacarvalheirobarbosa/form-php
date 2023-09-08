@@ -76,8 +76,8 @@ function createFileInputs(servico) {
   for (let i = 0; i < quantidadeDocumentos; i++) {
     const fileInput = document.createElement("input");
     fileInput.type = "file";
-    fileInput.id = "anexos[]";
-    fileInput.name = "anexos[]";
+    fileInput.id = "arquivos";
+    fileInput.name = "arquivos";
     fileInput.className =
       "file-input file-input-bordered file-input-primary file-input-sm w-full max-w-md";
 
