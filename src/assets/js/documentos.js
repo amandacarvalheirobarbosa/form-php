@@ -1,71 +1,9 @@
 function createFileInputs(servico) {
   const documentos = {
+    //Pode adicionar quantos serviços quiser (desde que altere no html)
     1: [
-      "Contrato social com última alteração",
       "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    2: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    3: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    4: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-      "CND",
-      "CRF",
-      "RAIS",
-    ],
-    5: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    6: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    7: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
-    ],
-    8: [
-      "Contrato social com última alteração",
-      "CNH + RG ou CPF",
-      "Comprovante de endereço de empresa e dos sócios com até 120 dias",
-      "Imposto de Renda + Recibo de Entrega",
-      "Faturamento dos últimos 12 meses",
-      "Endividamento",
+      "Comprovante de endereço",
     ],
   };
 
@@ -94,10 +32,6 @@ function createFileInputs(servico) {
   }
 }
 
-/* // Chama a função inicialmente para criar campos com base na opção padrão
-createFileInputs(document.getElementById("tipoServico").value); */
-
-// Adicionar um ouvinte de evento para detectar mudanças na seleção
 const selectServico = document.getElementById("tipoServico");
 selectServico.addEventListener("change", function () {
   const selectedOption = this.value;
