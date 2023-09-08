@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $Nome = $_POST["nome"];
   $Email = $_POST["email"];
-  $CNPJ = $_POST["cnpj"];
+  $CPF = $_POST["cpf"];
   $Celular = $_POST["celular"];
   $Agencia = $_POST["agencia"];
   $Conta = $_POST["conta"];
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   $corpo_mensagem = "Nome: " . $Nome . "\n";
   $corpo_mensagem .= "E-mail: " . $Email . "\n";
-  $corpo_mensagem .= "CNPJ: " . $CNPJ . "\n";
+  $corpo_mensagem .= "CPF: " . $CPF . "\n";
   $corpo_mensagem .= "Celular: " . $Celular . "\n";
   $corpo_mensagem .= "Agência: " . $Agencia . "\n";
   $corpo_mensagem .= "Conta: " . $Conta . "\n";
