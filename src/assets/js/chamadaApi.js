@@ -81,7 +81,6 @@ document
         })
         .then((data) => {
           console.log("Resposta da API:", data);
-          window.location.href = "https://apoio.gvdsolucoes.com.br/";
         })
         .catch((error) => {
           console.error("Erro:", error.message);
