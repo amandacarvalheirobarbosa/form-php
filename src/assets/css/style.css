@@ -10,6 +10,85 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.max-w-md {
+  max-width: 28rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.file-input-sm {
+  height: 2rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+}
+
+.file-input-primary {
+  --tw-border-opacity: 1 !important;
+  border-color: hsl(var(--p) / var(--tw-border-opacity)) !important;
+}
+
+.file-input {
+  border-width: 1px !important;
+  border-radius: var(--rounded-btn, 0.5rem) !important;
+}
+
+input[type="file"] {
+  writing-mode: horizontal-tb !important;
+}
+
+input[type="file" i] {
+  appearance: none;
+  background-color: initial;
+  cursor: default;
+  align-items: baseline;
+  color: inherit;
+  text-overflow: ellipsis;
+  white-space-collapse: preserve;
+  text-wrap: nowrap;
+  text-align: start !important;
+  padding: initial;
+  border: initial;
+  border-color: initial;
+  overflow: hidden !important;
+  border-radius: initial;
+}
+
+input {
+  text-rendering: auto;
+  color: fieldtext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: field;
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
 @media (hover: hover) {
   .btn:hover {
     --tw-border-opacity: 1;
@@ -129,8 +208,8 @@ button,
   background-image: none;
 }
 input::placeholder {
-  opacity: 1;
-  color: #9ca3af;
+  opacity: 1 !important;
+  color: #9ca3af !important;
 }
 button {
   cursor: pointer;
@@ -568,8 +647,8 @@ html {
   --tw-border-opacity: 0.2;
 }
 .input:focus {
-  outline-style: solid;
-  outline-width: 2px;
+  outline-style: solid !important;
+  outline-width: 2px !important;
   outline-offset: 2px;
   outline-color: hsl(var(--bc) / 0.2);
 }
