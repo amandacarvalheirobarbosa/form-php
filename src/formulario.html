@@ -54,14 +54,14 @@
           <div class="flex flex-row">
             <div class="flex flex-col">
               <label class="label">
-                <span class="label-text">CNPJ</span>
+                <span class="label-text">CPF</span>
               </label>
               <input
-                id="cnpj"
-                name="cnpj"
-                oninput="maskInput(this, '###.###.###/####-##')"
-                placeholder="xxx.xxx.xxx/xxxx-xx"
-                maxlength="19"
+                id="cpf"
+                name="cpf"
+                oninput="maskInput(this, '###.###.###-##')"
+                placeholder="xxx.xxx.xxx-xx"
+                maxlength="14"
                 class="input input-bordered input-primary w-full max-w-md"
               />
             </div>
@@ -216,14 +216,8 @@
               onchange="createFileInputs(this.value);"
             >
               <option value="">Selecione</option>
-              <option value="1">Antecipação de recebíveis</option>
-              <option value="2">Home Equity</option>
-              <option value="3">Crédito Tributário</option>
-              <option value="4">Giro PME BNDES</option>
-              <option value="5">Comissária</option>
-              <option value="6">Empréstimo com ou sem garantia</option>
-              <option value="7">Fomento a produção/matéria prima</option>
-              <option value="8">Consignado para seus funcionários</option>
+              <option value="1">Padrão</option>
+              <!-- PODE ADICIONAR MAIS SERVIÇOS SE QUISER -->
             </select>
           </div>
 
@@ -232,16 +226,6 @@
             name="camposArquivo"
             class="flex flex-col"
           ></div>
-
-          <!-- <div id="camposArquivo" name="camposArquivo" class="flex flex-col">
-          <div class="flex flex-col pt-4">
-            <label class="label">
-              <span class="label-text"></span>
-            </label>
-            <input type="file"
-              class="file-input file-input-bordered file-input-primary file-input-sm w-full max-w-md" />
-          </div>
-        </div> -->
 
           <div
             class="flex flex-row form-control pt-4 cursor-pointer justify-start"
